@@ -27,7 +27,7 @@ router.post(
       return res.status(400).json({ error: error.array() });
     }
 
-    //check whether the user eith this email exits already
+    //check whether the user with this email exits already
     try {
       let user = await User.findOne({ email: req.body.email });
       if (user) {
